@@ -12,7 +12,9 @@ pipeline {
 
         stage('Build and Test') {
             steps {
-                bat 'mvnw.cmd clean package'
+                withCredentials([string(credentialsId: 'db-password', variable: 'DB_PASSWORD')]) {
+                    bat 'mvnw.cmd clean package'
+                }
             }
         }
     }
