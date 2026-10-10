@@ -9,5 +9,11 @@ pipeline {
                 bat 'java -version'
             }
         }
+
+        stage('Build and Test') {
+            steps {
+                bat 'mvnw.cmd clean package'
+            }
+        }
     }
 }
