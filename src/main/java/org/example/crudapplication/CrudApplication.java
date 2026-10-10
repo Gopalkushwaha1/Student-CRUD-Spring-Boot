@@ -11,6 +11,7 @@ public class CrudApplication {
 
         SpringApplication.run(CrudApplication.class, args);
         System.out.println("Gopal is here..........");
+        System.out.println("Hello Gopal - Jenkins CI/CD Test!");
 
     }
 }
